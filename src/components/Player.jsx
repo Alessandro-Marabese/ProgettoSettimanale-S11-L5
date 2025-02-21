@@ -9,7 +9,7 @@ const Player = () => {
         <Col className="col-lg-10 offset-lg-2">
           <Row className="h-100 d-flex justify-content-center align-items-center">
             {selectedsong !== null && (
-              <div className="text-white col-4">
+              <div className="text-white col-4 ">
                 <p className="mb-0">{selectedsong.data.title}</p>
                 <p id="playeralbum" className="mb-0">
                   {selectedsong.data.album.title}

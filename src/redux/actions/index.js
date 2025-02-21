@@ -6,8 +6,10 @@ export const IS_LOADING_OFF = "IS_LOADING_OFF";
 export const GET_SONGS_BY_QUERY = "GET_SONGS_BY_QUERY";
 export const ADD_TO_FAVOURITES = "ADD_TO_FAVOURITES";
 export const SELECT_SONG = "SELECT_SONG";
+export const REMOVE_FROM_FAVOURITES = "REMOVE_FROM_FAVOURITES";
 
 export const addToFavouritesAction = (song) => ({ type: ADD_TO_FAVOURITES, payload: song });
+export const removeFromFavourites = (i) => ({ type: REMOVE_FROM_FAVOURITES, payload: i });
 export const selectSongAction = (song) => ({ type: SELECT_SONG, payload: song });
 
 export const getRockSongsAction = (artistName) => {
