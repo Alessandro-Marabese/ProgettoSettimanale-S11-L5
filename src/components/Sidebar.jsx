@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Col, Container, Navbar, NavbarBrand, NavbarCollapse } from "react-bootstrap";
+import { Col, Container, Navbar, NavbarBrand } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { getSongsByQueryAction } from "../redux/actions";
 

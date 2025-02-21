@@ -4,6 +4,7 @@ import popSongsReducer from "../reducers/popSongsReducer";
 import hiphopSongsReducer from "../reducers/hiphopSongsReducer";
 import getSongsReducer from "../reducers/getSongsByQuery";
 import selectedSongReducer from "../reducers/selectedSongReducer";
+import favouriteReducer from "../reducers/favouriteReducer";
 
 const rootReducer = combineReducers({
   rockSongs: rockSongsReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   hiphopSongs: hiphopSongsReducer,
   querySongs: getSongsReducer,
   selectedSong: selectedSongReducer,
+  favourites: favouriteReducer,
 });
 
 const store = configureStore({

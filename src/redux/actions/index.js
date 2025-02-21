@@ -7,7 +7,7 @@ export const GET_SONGS_BY_QUERY = "GET_SONGS_BY_QUERY";
 export const ADD_TO_FAVOURITES = "ADD_TO_FAVOURITES";
 export const SELECT_SONG = "SELECT_SONG";
 
-export const addToFavouritesAction = (fav) => ({ type: ADD_TO_FAVOURITES, payload: fav });
+export const addToFavouritesAction = (song) => ({ type: ADD_TO_FAVOURITES, payload: song });
 export const selectSongAction = (song) => ({ type: SELECT_SONG, payload: song });
 
 export const getRockSongsAction = (artistName) => {
