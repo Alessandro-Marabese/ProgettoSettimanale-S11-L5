@@ -42,8 +42,8 @@ const MainSection = () => {
             <div id="rock">
               <h2>Search Results</h2>
               <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="rockSection">
-                {querySongs.slice(0, 4).map((song) => (
-                  <AlbumCard key={song.id} data={song} />
+                {querySongs.slice(0, 4).map((songData) => (
+                  <AlbumCard key={songData.id} data={songData} />
                 ))}
               </div>
             </div>
@@ -58,23 +58,7 @@ const MainSection = () => {
               {isLoadingRock ? (
                 <Spinner animation="border" variant="primary" />
               ) : rockSongs.length > 0 ? (
-                rockSongs.slice(0, 4).map((song) => <AlbumCard key={song.id} data={song} />)
-              ) : (
-                <p>No Rock Songs Found</p>
-              )}
-            </div>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col className="col-10">
-          <div id="rock">
-            <h2>Rock Classics</h2>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3" id="rockSection">
-              {isLoadingRock ? (
-                <Spinner animation="border" variant="primary" />
-              ) : rockSongs.length > 0 ? (
-                rockSongs.slice(0, 4).map((song) => <AlbumCard key={song.id} data={song} />)
+                rockSongs.slice(0, 4).map((songData) => <AlbumCard key={songData.id} data={songData} />)
               ) : (
                 <p>No Rock Songs Found</p>
               )}
@@ -90,7 +74,7 @@ const MainSection = () => {
               {isLoadingPop ? (
                 <Spinner animation="border" variant="primary" />
               ) : popSongs.length > 0 ? (
-                popSongs.slice(0, 4).map((song) => <AlbumCard key={song.id} data={song} />)
+                popSongs.slice(0, 4).map((songData) => <AlbumCard key={songData.id} data={songData} />)
               ) : (
                 <p>No Pop Songs Found</p>
               )}
@@ -106,9 +90,9 @@ const MainSection = () => {
               {isLoadingHiphop ? (
                 <Spinner animation="border" variant="primary" />
               ) : hiphopSongs.length > 0 ? (
-                hiphopSongs.slice(0, 4).map((song) => <AlbumCard key={song.album.id} data={song} />)
+                hiphopSongs.slice(0, 4).map((songData) => <AlbumCard key={songData.album.id} data={songData} />)
               ) : (
-                <p>No Rock Songs Found</p>
+                <p>No HipHop Songs Found</p>
               )}
             </div>
           </div>

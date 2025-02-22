@@ -8,8 +8,8 @@ export const ADD_TO_FAVOURITES = "ADD_TO_FAVOURITES";
 export const SELECT_SONG = "SELECT_SONG";
 export const REMOVE_FROM_FAVOURITES = "REMOVE_FROM_FAVOURITES";
 
-export const addToFavouritesAction = (song) => ({ type: ADD_TO_FAVOURITES, payload: song });
-export const removeFromFavourites = (i) => ({ type: REMOVE_FROM_FAVOURITES, payload: i });
+export const addToFavouritesAction = (fav) => ({ type: ADD_TO_FAVOURITES, payload: fav });
+export const removeFromFavourites = (fav) => ({ type: REMOVE_FROM_FAVOURITES, payload: fav.id });
 export const selectSongAction = (song) => ({ type: SELECT_SONG, payload: song });
 
 export const getRockSongsAction = (artistName) => {

@@ -10,7 +10,7 @@ const AlbumCard = (song) => {
   const dispatch = useDispatch();
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const favourites = useSelector((state) => state.favourites.content);
-  const isSongInFavourites = favourites.some((singleSong) => singleSong.id === song.id);
+  const isSongInFavourites = favourites.some((singleSong) => singleSong.id === song.data.id);
 
   return (
     <div className="col">
@@ -22,7 +22,7 @@ const AlbumCard = (song) => {
           dispatch(selectSongAction(song));
         }}
       />
-      <div className="d-flex align-items-center">
+      <div>
         <p>
           Track: {song.data.title}
           <br />
@@ -31,9 +31,9 @@ const AlbumCard = (song) => {
         {isSongInFavourites ? (
           <Button
             onClick={() => {
-              dispatch(removeFromFavourites(song.id));
+              dispatch(removeFromFavourites(song.data));
             }}
-            className="ms-auto"
+            className="d-block"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart-fill" viewBox="0 0 16 16">
               <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
@@ -41,9 +41,9 @@ const AlbumCard = (song) => {
           </Button>
         ) : (
           <Button
-            className="ms-auto"
+            className="d-block"
             onClick={() => {
-              dispatch(addToFavouritesAction(song));
+              dispatch(addToFavouritesAction(song.data));
             }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart" viewBox="0 0 16 16">

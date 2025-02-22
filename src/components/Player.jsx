@@ -8,18 +8,20 @@ const Player = () => {
       <Row className="h-100">
         <Col className="col-lg-10 offset-lg-2">
           <Row className="h-100 d-flex justify-content-center align-items-center">
-            {selectedsong !== null && (
-              <div className="text-white col-4 ">
-                <p className="mb-0">{selectedsong.data.title}</p>
-                <p id="playeralbum" className="mb-0">
-                  {selectedsong.data.album.title}
-                </p>
-                <p id="artistplayer" className="mb-0">
-                  {selectedsong.data.artist.name}
-                </p>
-              </div>
-            )}
-            <Col className="col-9 col-md-4 playerControls me-auto">
+            <div id="" className="text-white col-4 ">
+              {selectedsong !== null && (
+                <>
+                  <p className="mb-0">{selectedsong.data.title}</p>
+                  <p id="playeralbum" className="mb-0">
+                    {selectedsong.data.album.title}
+                  </p>
+                  <p id="artistplayer" className="mb-0">
+                    {selectedsong.data.artist.name}
+                  </p>
+                </>
+              )}
+            </div>
+            <Col className="col-8 col-md-4 playerControls me-auto">
               <div className="d-flex">
                 <a href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-shuffle" viewBox="0 0 16 16">
