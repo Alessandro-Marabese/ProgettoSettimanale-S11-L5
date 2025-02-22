@@ -30,6 +30,7 @@ const AlbumCard = (song) => {
         </p>
         {isSongInFavourites ? (
           <Button
+            id="removebutton"
             onClick={() => {
               dispatch(removeFromFavourites(song.data));
             }}
@@ -41,6 +42,7 @@ const AlbumCard = (song) => {
           </Button>
         ) : (
           <Button
+            id="addbutton"
             className="d-block"
             onClick={() => {
               dispatch(addToFavouritesAction(song.data));
